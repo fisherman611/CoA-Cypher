@@ -23,7 +23,7 @@ MARKET_API_KEY={your_api_key_here}
 NEO4J_PASSWORD={your_neo4j_password}
 NEO4J_USERNAME={your_neo4j_username}
 ```
-3. Download the benchmark data from [Hugging Face](https://huggingface.co/datasets/fisherman611/full_text_to_cypher_benchmarks) and place it under the `benchmarks/` directory
+3. Download the Cypherbench benchmark data from [Hugging Face](https://huggingface.co/datasets/megagonlabs/cypherbench) and place it under the `benchmarks/` directory
 4. Install and run Neo4j locally
 5. Create a local Neo4j instance named `cypherbench-db`
 6. Inside those instances, create empty databases for the graphs you want to use
