@@ -51,6 +51,8 @@ Evaluate candidate syntheses
 - Ensure all required constraints from ANALYSIS are covered.
 - Ensure traversal depth and graph structure match the intended path.
 - Ensure COUNT, AVG, SUM, MAX, MIN, DISTINCT, grouping, ORDER BY, and LIMIT are handled correctly when needed.
+- Treat `ANALYSIS.result_modifiers` as authoritative for DISTINCT / ORDER BY / LIMIT.
+- If `ANALYSIS.result_modifiers` is empty, do NOT add DISTINCT, ORDER BY, or LIMIT.
 - Prefer strong semantic alignment with QUESTION.
 - Avoid disconnected MATCH patterns, Cartesian products, unsupported assumptions, and incoherent fragment combinations.
 - Prefer the cleanest valid structure that remains executable and complete.

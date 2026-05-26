@@ -50,6 +50,8 @@ Evaluate candidate fixes
 - Ensure required constraints from ANALYSIS are covered.
 - Ensure traversal depth and direction are consistent with the intended graph path.
 - Ensure grouping, COUNT, AVG, SUM, MAX, MIN, DISTINCT, ORDER BY, and LIMIT are handled correctly when needed.
+- Treat `ANALYSIS.result_modifiers` as authoritative for DISTINCT / ORDER BY / LIMIT.
+- If `ANALYSIS.result_modifiers` is empty, do NOT add DISTINCT, ORDER BY, or LIMIT.
 - Avoid disconnected MATCH patterns and Cartesian products.
 - Prefer the smallest valid correction unless a broader rewrite is necessary.
 

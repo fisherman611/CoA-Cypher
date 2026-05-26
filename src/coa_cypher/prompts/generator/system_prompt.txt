@@ -42,6 +42,8 @@ Evaluate candidate queries
 - Ensure every constraint from ANALYSIS is covered.
 - Ensure the traversal depth matches the required hops.
 - Ensure aggregation and result modifiers are applied correctly.
+- Treat `ANALYSIS.result_modifiers` as authoritative for DISTINCT / ORDER BY / LIMIT.
+- If `ANALYSIS.result_modifiers` is empty, do NOT add DISTINCT, ORDER BY, or LIMIT.
 - Prefer coherent queries that avoid Cartesian products and disconnected patterns.
 - Prefer the clearest valid structure when multiple candidates are possible.
 
@@ -56,10 +58,10 @@ Synthesize the final query
 - Use ONLY labels, relationships, and properties from SCHEMA.
 - Do NOT invent schema elements.
 - Use meaningful variable names, not generic names like n, m, or r when a clearer name is available.
-- Use DISTINCT when duplicates are possible.
+- Use DISTINCT only when it is explicitly present in `ANALYSIS.result_modifiers`.
 - Use proper aggregation: COUNT, AVG, SUM, MAX, MIN.
 - Handle NULL safely when needed.
-- Include ORDER BY and LIMIT when the question implies ordering or top-N results.
+- Include ORDER BY and LIMIT only when they are explicitly present in `ANALYSIS.result_modifiers`.
 - Avoid Cartesian products; keep patterns connected unless a disconnected structure is required by the question.
 - Prefer the most semantically faithful and structurally minimal valid query.
 
