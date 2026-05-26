@@ -1,0 +1,13 @@
+QUESTION:
+{question}
+
+SCHEMA:
+{schema}
+
+CONSTRAINTS:
+{constraints}
+
+HOPS: {hops}
+
+Produce 3 meaningfully different decomposition strategies for the QUESTION. Use the CONSTRAINTS and HOPS information to guide the decomposition. For each sub-question, write a partial Cypher fragment that captures its logic.
+Return only the JSON, nothing else.

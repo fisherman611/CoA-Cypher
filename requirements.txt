@@ -1,0 +1,8 @@
+neo4j~=6.0.3
+pydantic~=2.12.5
+tqdm~=4.67.1
+langchain-openai~=1.1.0
+langchain-core~=1.1.0
+langchain-community
+python-dotenv~=1.2.1
+numpy>=1.24.0

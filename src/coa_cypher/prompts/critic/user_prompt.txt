@@ -1,0 +1,14 @@
+QUESTION:
+{question}
+
+SCHEMA:
+{schema}
+
+PREVIOUS_QUERY:
+{previous_query}
+
+EXECUTION_RESULT_OR_ERROR:
+{execution_result}
+
+Classify the error as syntax, schema, or unknown, audit the query against SCHEMA, determine whether feedback should go to the generator or analyzer, write concrete patch instructions, and decide whether regeneration is needed.
+Return only the JSON, nothing else.

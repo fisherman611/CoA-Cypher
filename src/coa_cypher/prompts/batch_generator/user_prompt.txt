@@ -1,0 +1,20 @@
+QUESTION:
+{question}
+
+SCHEMA:
+{schema}
+
+ANALYSIS:
+{analysis}
+
+PREVIOUS_QUERIES:
+{previous_queries}
+
+EXECUTION_RESULTS:
+{execution_results}
+
+STRUCTURED_FEEDBACKS:
+{feedbacks}
+
+Analyze all candidate queries together, cross-reference them with ANALYSIS, use the aligned execution results and feedbacks, verify every label, relationship, and property against SCHEMA, and synthesize one final corrected Cypher query.
+Return ONLY the JSON output in the specified format, nothing else.

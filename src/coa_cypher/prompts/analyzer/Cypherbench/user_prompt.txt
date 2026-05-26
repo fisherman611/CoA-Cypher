@@ -1,0 +1,10 @@
+QUESTION:
+{question}
+
+FULL SCHEMA:
+{schema}
+
+Identify the required entities, attributes, relations, and any bridge elements, then prune to the minimal connected subset that fully supports the question. Also extract all constraints, count the number of hops, and list any aggregations or result modifiers.
+For `aggregations`, return only uppercase function names (e.g., `["COUNT"]`). For `result_modifiers`, return concrete modifiers (e.g., `["ORDER BY Person.age DESC", "LIMIT 5", "DISTINCT"]`).
+Always include both keys `aggregations` and `result_modifiers`; if none, return empty arrays (`[]`).
+Return ONLY the JSON output in the specified format, nothing else.

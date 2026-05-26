@@ -1,0 +1,23 @@
+QUESTION:
+{question}
+
+SCHEMA:
+{schema}
+
+SUB_QUESTIONS:
+{sub_questions}
+
+ANALYSIS:
+{analysis}
+
+PREVIOUS_QUERY:
+{previous_query}
+
+EXECUTION_RESULT_OR_ERROR:
+{execution_result}
+
+STRUCTURED_FEEDBACK:
+{feedback}
+
+Determine the root cause from the feedback and execution result, re-check the sub-questions and analysis metadata, ensure all patch instructions are satisfied, verify every label, relationship, and property against SCHEMA, and generate one corrected Cypher query.
+Return ONLY the JSON output in the specified format, nothing else.

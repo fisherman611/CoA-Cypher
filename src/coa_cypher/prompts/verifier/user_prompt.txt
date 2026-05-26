@@ -1,0 +1,11 @@
+QUESTION:
+{question}
+
+SCHEMA:
+{schema}
+
+CYPHER:
+{cypher}
+
+Extract structured intents for both QUESTION and CYPHER, compare them using the defined mismatch types, and write concrete patch instructions for any semantic gaps you find.
+Return ONLY the JSON output in the specified format, nothing else.

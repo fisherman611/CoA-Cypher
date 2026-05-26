@@ -1,0 +1,19 @@
+QUESTION:
+{question}
+
+FULL SCHEMA:
+{schema}
+
+PREVIOUS_SELECTED_SCHEMA:
+{previous_selected_schema}
+
+PREVIOUS_QUERY:
+{previous_query}
+
+CRITIC_FEEDBACK:
+{feedback}
+
+Review the Critic's feedback, determine what was missing or incorrect in the previous schema selection, then select the minimal connected sub-schema from FULL SCHEMA that resolves all identified issues. Re-extract the constraints, hops, aggregations, result modifiers, and summarize the corrections that were applied.
+For `aggregations`, return only uppercase function names (e.g., `["COUNT"]`). For `result_modifiers`, return concrete modifiers (e.g., `["ORDER BY Person.age DESC", "LIMIT 5", "DISTINCT"]`).
+Always include both keys `aggregations` and `result_modifiers`; if none, return empty arrays (`[]`).
+Return ONLY the JSON output in the specified format, nothing else.

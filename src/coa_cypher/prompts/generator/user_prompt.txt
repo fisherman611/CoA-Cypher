@@ -1,0 +1,14 @@
+QUESTION:
+{question}
+
+SCHEMA:
+{schema}
+
+SUB_QUESTIONS:
+{sub_questions}
+
+ANALYSIS:
+{analysis}
+
+Generate a Cypher query that answers the QUESTION. Use the sub-questions and their partial Cypher fragments when they help, ensure all constraints from ANALYSIS are reflected, and verify every label, relationship, and property against SCHEMA.
+Return ONLY the JSON output in the specified format, nothing else.
